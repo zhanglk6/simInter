@@ -12,7 +12,7 @@ The project implements and compares the following randomization schemes:
 - **SRS**: Simple Random Sampling
 - **SBR**: Stratified Block Randomization
 - **SBCD**: Stratified Efron's Biased Coin Design
-- **PS**: Profile-based Stratified Efron's Biased Coin Design
+- **PS**: Pocock and Simon's Minimization 
 
 ## Statistical Tests
 
@@ -21,12 +21,12 @@ The code evaluates four different test procedures:
 1. **OLS Test**: Ordinary Least Squares test
 2. **Usual Test**: Standard interaction test
 3. **Modified Test**: Modified test accounting for randomization
-4. **Efficient Test**: Efficient test using cross-fitting and potential outcome models
+4. **Efficient Test**: Efficient test using cross-fitting
 
 ## File Structure
 
 - `main.R`: Main simulation script that orchestrates Monte Carlo simulations and generates results tables
-- `randomization_methods.R`: Implementation of randomization schemes (SRS, SBR, SBCD, PS, WEI)
+- `randomization_methods.R`: Implementation of randomization schemes (SRS, SBR, SBCD, PS)
 - `sample_model.R`: Data generation functions and model fitting procedures for different outcome models
 - `test_formula.R`: Test statistic computation and output functions
 
