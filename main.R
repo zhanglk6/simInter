@@ -142,15 +142,15 @@ paper_output_small <- function(pi = 0.5) {
   table1_yes <- simulate_and_compute_small(80, 0.5, pi)
   
   # Model 2
-  table2_no <- simulate_and_compute_small(160, 0, pi)
-  table2_yes <- simulate_and_compute_small(160, 0.5, pi)
+  table2_no <- simulate_and_compute_small(120, 0, pi)
+  table2_yes <- simulate_and_compute_small(120, 0.5, pi)
   
   # Model 3
-  table3_no <- simulate_and_compute_small(320, 0, pi)
-  table3_yes <- simulate_and_compute_small(320, 0.5, pi)
+  table3_no <- simulate_and_compute_small(160, 0, pi)
+  table3_yes <- simulate_and_compute_small(160, 0.5, pi)
   
-  table4_no <- simulate_and_compute_small(640, 0, pi)
-  table4_yes <- simulate_and_compute_small(640, 0.5, pi)
+  table4_no <- simulate_and_compute_small(200, 0, pi)
+  table4_yes <- simulate_and_compute_small(200, 0.5, pi)
   
   table_no <- rbind(table1_no, table2_no, table3_no, table4_no)
   table_yes <- rbind(table1_yes, table2_yes, table3_yes, table4_yes)
