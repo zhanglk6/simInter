@@ -136,4 +136,11 @@ Results are returned as matrices with rejection proportions (multiplied by 100) 
 - Randomization method (SRS, SBR, SBCD, PS)
 - Test procedure (OLS, Usual, Modified, Efficient)
 
-
+## Clinical Trial Example
+```r
+# Simulate for synthetics CPASP data
+syn_p_equal = syn(cont_subset,ssint0,ssint1, 1/2, 600,500)
+xtable(100 * matrix(syn_p_equal ,ncol = 12, byrow = T), digits = 2)
+##### effect plots for HAMA_SOMATI and AGE
+syn.effect.plot(cont_subset,ssint0,ssint1, n_boot = 600)
+```
