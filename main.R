@@ -15,7 +15,10 @@ library(parallel)
 library(xtable)
 library(bigsplines)
 library(caret)
-
+load(file = "cont_subset.RData")
+load(file = "spline0.RData")
+load(file = "spline1.RData")
+source("synthetic_analysis.R")
 
 simulate_model <- function(model_num, N = 800, times = 5000, delta = 0, pi = 0.5, seeds = 439, transformed = FALSE) {
   numCores <- 8
@@ -194,3 +197,8 @@ tab_small_2 <- paper_output_small(1/2)
 tab_trans_1 <- paper_output_trans(1/2)
 tab_trans_1 %>% round(1)
 
+### Clinical Trial Example
+syn_p_equal = syn(cont_subset,ssint0,ssint1, 1/2, 600,500)
+xtable(100 * matrix(syn_p_equal ,ncol = 12, byrow = T), digits = 2)
+##### effect plots for HAMA_SOMATI and AGE
+syn.effect.plot(cont_subset,ssint0,ssint1, n_boot = 600)
